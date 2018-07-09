@@ -91,6 +91,87 @@ Plotly.plot('plotly-div', {
   layout: layout
 });
       // JAVASCRIPT CODE GOES HERE
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         //Second graph - showing MP with age for only males 
+         trace1 = {
+  x: ['20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90'], 
+  y: ['4', '7', '8', '22', '19', '27', '10'], 
+  marker: {color: 'rgb(54, 50, 153)'}, 
+  name: 'EGFR-M', 
+  type: 'bar', 
+  uid: '2c822d', 
+  xsrc: 'Shreya_ubilab:16:f090bf', 
+  ysrc: 'Shreya_ubilab:16:bb0d85'
+};
+trace2 = {
+  x: ['20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90'], 
+  y: ['1', '3', '16', '17', '17', '23', '15'], 
+  marker: {color: 'rgb(17, 123, 215)'}, 
+  name: 'TP53-M', 
+  type: 'bar', 
+  uid: '7a7bca', 
+  xsrc: 'Shreya_ubilab:16:f090bf', 
+  ysrc: 'Shreya_ubilab:16:9c6bee'
+};
+trace3 = {
+  x: ['20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90'], 
+  y: ['1', '2', '5', '13', '25', '30', '6'], 
+  marker: {color: 'rgb(37, 180, 167)'}, 
+  name: 'KRAS-M', 
+  type: 'bar', 
+  uid: 'e480a9', 
+  xsrc: 'Shreya_ubilab:16:f090bf', 
+  ysrc: 'Shreya_ubilab:16:a5a145'
+};
+data = [trace1, trace2, trace3];
+layout = {
+  hovermode: 'closest', 
+  legend: {
+    bgcolor: '#F5F6F9', 
+    font: {color: '#4D5663'}
+  }, 
+  paper_bgcolor: '#F5F6F9', 
+  plot_bgcolor: '#F5F6F9', 
+  showlegend: true, 
+  title: 'Prevalence of EGFR, TP53 and KRAS in different age groups for Males', 
+  titlefont: {color: '#4D5663'}, 
+  xaxis: {
+    autorange: true, 
+    gridcolor: '#E1E5ED', 
+    range: [-0.5, 6.5], 
+    showgrid: true, 
+    tickfont: {color: '#4D5663'}, 
+    title: '', 
+    titlefont: {color: '#4D5663'}, 
+    type: 'category', 
+    zerolinecolor: '#E1E5ED'
+  }, 
+  yaxis: {
+    autorange: true, 
+    gridcolor: '#E1E5ED', 
+    range: [0, 31.5789473684], 
+    showgrid: true, 
+    tickfont: {color: '#4D5663'}, 
+    title: 'Prevalence ', 
+    titlefont: {color: '#4D5663'}, 
+    type: 'linear', 
+    zerolinecolor: '#E1E5ED'
+  }
+};
+Plotly.plot('plotly-div', {
+  data: data,
+  layout: layout
+});
       </script>
    </body>
  </html>
